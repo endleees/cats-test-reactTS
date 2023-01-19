@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './styles/styles.scss';
 import { mokeCards } from './mokes/moke-cards';
 import Cards from './components/cards/cards';
 
