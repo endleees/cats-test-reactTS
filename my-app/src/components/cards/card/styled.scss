@@ -16,21 +16,35 @@
             height: 480px;
             border-radius: 0 12px 12px 12px;
             margin-bottom: 20px;
-            box-sizing: border-box;
+            
+            
+            &--added {
+                background-color: #1698D9;
+                & > .card__weight {
+                    background-color: #D91667;
+                }
+            }
         }
+        
+        
+        
+
+    }
+    
+    &__ground {
+        width: 100%;
+        height: 100%;
+        position: absolute;
         &:hover {
            
             & .card__item-container:hover {
                 border: 4px solid #2EA8E6;
             }
             & .card__weight:hover {
-                background: #2EA8E6;
+                background: red;
             }
         }
-
     }
-    
-    
     &__corner {
         position: absolute;
         width: 40px;
@@ -114,11 +128,13 @@
         border-bottom-left-radius: 10px;
     }
     &__order {
-        
-        bottom: 0;
+        margin-bottom: 10px;
         text-align: center;
-        z-index: 1;
+        position: relative;
+        z-index: 5;
+        bottom: -5px;
         color: #ffffff;
+        overflow: visible;
         &-link {
             color: #1698D9;
             
