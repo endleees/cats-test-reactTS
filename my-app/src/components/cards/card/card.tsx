@@ -8,7 +8,7 @@ export default function Card ({card}:any){
     let i=0;
     const onClickAdd = (el:any)=>{
         console.log(el)
-        // const order = el.querySelector('#cardOrder')
+        const order = document.querySelector('#cardOrder')
         el = el.target.offsetParent;
         
         console.log(el)
@@ -27,7 +27,7 @@ export default function Card ({card}:any){
             el.classList.remove('card__item-container--default');
             el.classList.add('card__item-container--added');
             
-            // order!.textContent= card.cardAddedCart
+            order!.textContent= card.cardAddedCart
 
         }
         else{
@@ -35,7 +35,7 @@ export default function Card ({card}:any){
             i--;
             el.classList.remove('card__item-container--added');
             el.classList.add('card__item-container--default');
-            // cardOrder!.innerHTML='Чего сидишь? Порадуй котэ, <span class="card__order-link">купи</span><span class="card__order-doted">.</span>' 
+            order!.innerHTML='Чего сидишь? Порадуй котэ, <span class="card__order-link">купи</span><span class="card__order-doted">.</span>' 
         }
         
     }
@@ -43,11 +43,8 @@ export default function Card ({card}:any){
     return(
         
             
-        <li className="card card__item"  key={card.id}>
+        <li className="card card__item"   key={card.id}>
             <div className="card__item-container card__item-container--default"onClick={(el)=> onClickAdd(el)} id="itemContainer">
-                <div>
-                    
-                </div>
                 <div className="card__ground"></div>
                 <div className="card__corner"></div>
                 <div className="card__title-description">
@@ -74,11 +71,11 @@ export default function Card ({card}:any){
                     {card.cardWeight} 
                     <span className="card__weight-description">кг</span>
                 </div>
+                
+                </div>
                 <div className="card__order" id='cardOrder'>
                     Чего сидишь? Порадуй котэ, <span className="card__order-link">купи</span><span className="card__order-doted">.</span>
-            </div>
                 </div>
-                
             
             
             
